@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cook Book</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../recipes.css">
+</head>
+<body>
+    <div class="loader" id="loading"> </div>
+    <header class="container" id="home">
+
+        <div class="header">
+            <div class="nav-box">
+                <div class="dot first"></div>
+                <div class="dot second"></div>
+                <div class="dot third"></div>
+            </div>
+            <div class="logo">
+                <a href="../../index.html">
+                    <h1>Cook <span>Book</span></h1>
+                </a>
+                <!-- <h1>Try My Food</h1> -->
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../recipes.html" id="recipe-time">Recipes</a>
+                        <!-- <ul class="drop-down">
+                            <li><a href="assets/breakfast-recipes.html">Breakfast Recipes</a></li>
+                            <li><a href="assets/lunch.html">Lunch</a></li>
+                            <li><a href="assets/dinner.html">Dinner</a></li>
+                        </ul> -->
+                    </li>
+                    <li><a href="#">Collection</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <div class="search-area ">
+                    <div class="search-heading-text search-btn">
+                        <span>Search</span>
+                    </div>
+                    <div class="search">
+                        <input id="searchid" onfocus="this.value=''" placeholder="What are you looking for?">
+                        <div class="search-img" type="submit">
+                            <img src="../images/search.svg" alt="search">
+                        </div>
+                    </div>
+                    <div class="search-btn ">
+                        <div class="search-img search-button active">
+                            <img src="../images/search.svg" alt="search">
+                        </div>
+
+                        <div class="search-img close-search-button">
+                            <img src="../images/cross-lines.svg" alt="close">
+                        </div>
+                    </div>
+
+                </div>
+                <!-- search container  -->
+                <div class="search_container">
+                    <h3>Item Name</h3>
+                    <div class="serach-wrapper" id="search-list">
+                    </div>
+
+                    <!-- <hr> -->
+                    <h3>Ingredients</h3>
+                    <div class="serach-wrapper" id="ingred-search-list">
+
+                    </div>
+
+                </div>
+                <!-- search ends  -->
+                <div class="subscribe header-login">
+                    <a class="main-login-button">
+                        <button class="login-btn" onclick="show_hide_login()">
+                            <img src="../images/account_circle.svg" alt="login">
+                            <span>Login</span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="login-form">
+                <div class="login-container">
+                    <div class="login-header">
+                        <h3 class="logo">Cook Book</h3>
+                        <div class="login-header-close" onclick="show_hide_login()">
+                            <img src="../images/cross-lines.svg" alt="close">
+                        </div>
+                    </div>
+                    <img src="../images/samosa.webp" alt="cook book">
+                    <div class="login-wrapper">
+                        <h3 class="sub-page-heading active">Login</h3>
+                        <h3 class="sub-page-heading">SignUp</h3>
+                        <div class="username log">
+                            <label for="full_name">User Name</label>
+                            <input type="username" class="login-inputs" id="full_name" placeholder="Enter your Name">
+                        </div>
+                        <div class="emailid log">
+                            <label for="email">Email Address</label>
+                            <input type="email" class="login-inputs" id="email" placeholder="Enter your Email-Id">
+                        </div>
+                        <div class="passwords log">
+                            <label for="password">Password</label>
+                            <input type="password" class="login-inputs" id="password" placeholder="Enter your Password">
+                        </div>
+                        <div class="button-log active" id="login">LOG IN</div>
+                        <div class="button-log" id="register">Sign Up</div>
+
+                        <div class="other-option active" onclick="other_option(this)">
+                            don't have account Sign-Up
+                        </div>
+                        <div class="other-option" onclick="other_option(this)">
+                            have a account Login
+                        </div>
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header ends -->
+    <main>
+        <section class="main-content">
+            <div class="container content">
+                <article class="left title-content">
+                    <div class="main-text">
+                        <h1>My Mango Lassi</h1>
+                    </div>
+                    <div class="main-dis">
+                        <p>Mango lassi is very rich and luxurious drink with yogurt and mangoes. It is the perfect summer drink when served chilled.
+                        </p>
+                    </div>
+                </article>
+                <div class="right ani-bottom">
+                    <div class="main-img"><img src="../images/mango-lassi.webp" alt="Palak Paneer"></div>
+                </div>
+            </div>
+        </section>
+        <!-- intro ends  -->
+        
+        <section class="time container">
+            <div class="row-grid">
+                <div class="prep-time">
+                    <h3>Prep Time</h3>
+                    <p>10 mins</p>
+                </div>
+                
+                <div class="total-time">
+                    <h3>Total Time</h3>
+                    <p>10 mins</p>
+                </div>
+                <div class="serv-time">
+                    <h3>Serving:</h3>
+                    <p>2 </p>
+                </div>
+                <div class="yield-time">
+                    <h3>Yield:</h3>
+                    <p>2 serving</p>
+                </div>
+            </div>
+        </section>
+        <section class="ingredient container col-flex">
+            <div class="dressing">
+                <h2>Dressing</h2>
+                <ul>
+                    <li>1 ½ cups mangos - peeled, seeded, chopped, and chilled</li>
+                    <li>1 ½ cups plain yogurt</li>
+                    <li>½ cup cold milk</li>
+                    <li>2 tablespoons heavy cream</li>
+                    <li>2 tablespoons confectioners' sugar</li>
+                    <li>½ teaspoon ground cardamom</li>
+                </ul>
+            </div>
+            
+        </section>
+        <!-- ingredients ends  -->
+        <section class="Directions container">
+            <div>
+                <h2>Directions</h2>
+            </div>
+            <div class="block">
+        
+                <div class="steps">
+                    <h3>Step 1</h3>
+                    <p>Combine mangos, yogurt, milk, cream, confectioners' sugar, and cardamom in a blender; blend until smooth and frothy. Pour into glasses and serve immediately.</p>
+                </div>
+                
+            </div>
+        </section>
+        <!-- direction ends  -->
+        <section class="nutrition container ">
+            <div class="title">
+                <h2>Nutrition Facts</h2>
+                <span>(per serving)</span>
+            </div>
+            <div class="row-grid">
+                <div class="calories">
+                    <h3>228</h3>
+                    <p>Calories</p>
+                </div>
+                <div class="fat">
+                    <h3>10g</h3>
+                    <p>Fat</p>
+                </div>
+                <div class="carbs">
+                    <h3>24g</h3>
+                    <p>Carbs</p>
+                </div>
+                <div class="protein">
+                    <h3>12g</h3>
+                    <p>Protein</p>
+                </div>
+        
+            </div>
+        </section>
+    </main>
+
+<!-- footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <div class="logo">
+                    <a href="../index.html">
+                        <h1>Cook Book</h1>
+                    </a>
+                </div>
+                <div>
+                    <div class="subscribe">
+                        <a class="main-login-button">
+                        <button class="login-btn" onclick="show_hide_login()">
+                        <img src="../images/account_circle.svg" alt="login">    
+                        <span>Login</span>
+                    </button>
+                    </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Recipes</a></li>
+                    <li><a href="#">Collection</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+            <div class="navigation">
+                <ul>
+                    <li><a href="#">Dinner</a></li>
+                    <li><a href="#">Meals</a></li>
+                    <li><a href="#">Occasions</a></li>
+                    <li><a href="#">Kitchen Tips</a></li>
+                </ul>
+            </div>
+            <div class="navigation terms">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <!-- <li><a href="#">Collection</a></li>
+                    <li><a href="#">About Us</a></li> -->
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+</body>
+<script type="text/javascript" src="
+../../script.js"></script>
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+    import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
+
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyCJ-tAC4zF1oX-Ew-oidjrvs171w7MQlf0",
+        authDomain: "cook-book-82b5e.firebaseapp.com",
+        databaseURL: "https://cook-book-82b5e-default-rtdb.firebaseio.com",
+        projectId: "cook-book-82b5e",
+        storageBucket: "cook-book-82b5e.appspot.com",
+        messagingSenderId: "775511724331",
+        appId: "1:775511724331:web:c006966e3112c96343756e"
+    };
+
+    // Initialize Firebase
+    // const app = initializeApp(firebaseConfig);
+
+    // Initialize Firebase
+    const firebase = initializeApp(firebaseConfig);
+    // Initialize variables
+    const auth = getAuth(firebase);
+    const db = getDatabase(firebase);
+
+    // Set up our register function
+    document.getElementById('register').addEventListener('click', () => {
+        // Get all our input fields
+        let email = document.getElementById('email').value
+        let password = document.getElementById('password').value
+        var full_name = document.getElementById('full_name').value
+        //   favourite_song = document.getElementById('favourite_song').value
+        //   milk_before_cereal = document.getElementById('milk_before_cereal').value
+
+        // Validate input fields
+        if (validate_email(email) == false || validate_password(password) == false) {
+            alert('Email or Password is Outta Line!!')
+            return
+            // Don't continue running the code
+        }
+        if (validate_field(full_name) == false) {
+            alert('enter user name!')
+            return
+        }
+
+        // Move on with Auth
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+                // ...
+
+                // Add this user to Firebase Database
+                // var database_ref = database.ref()
+
+                // // Create User data
+                // var user_data = {
+                //     full_name : full_name,
+                //   email : email,
+                //   last_login : Date.now()
+                // }
+
+                // // Push to Firebase Database
+                // database_ref.child('users/' + user.uid).set(user_data)
+                let userId = full_name;
+                set(ref(db, 'users/' + userId), {
+                    username: full_name,
+                    email: email,
+                    last_login: Date.now()
+                });
+
+                // DOne
+                alert('User Created!!')
+            })
+            .catch((error) => {
+                // Firebase will use this to alert of its errors
+                var error_code = error.code
+                var error_message = error.message
+
+                alert(error_message)
+            })
+    })
+    // Set up our login function
+    document.getElementById('login').addEventListener('click', () => {
+
+        // Get all our input fields
+        let email = document.getElementById('email').value
+        let password = document.getElementById('password').value
+
+        // Validate input fields
+        if (validate_email(email) == false || validate_password(password) == false) {
+            console.log('email is' + email)
+            alert('Email or Password is Outta Line!!')
+            return
+            // Don't continue running the code
+        }
+
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+                // ...
+
+
+                // Add this user to Firebase Database
+                // var database_ref = database.ref()
+
+                // Create User data
+                // var user_data = {
+                //   last_login : Date.now()
+                // }
+
+                // Push to Firebase Database
+                // database_ref.child('users/' + user.uid).update(user_data)
+                //     let userId=full_name;
+                //     set(ref(db, 'users/' + userId), {
+                //     last_login : Date.now()
+                //   });
+
+                // DOne
+                alert('User Logged In!!')
+                // shos(full_name);
+
+            })
+            .catch(function (error) {
+                // Firebase will use this to alert of its errors
+                var error_code = error.code
+                var error_message = error.message
+
+                alert(error_message)
+            })
+
+    })
+
+
+
+
+    // Validate Functions
+    function validate_email(email) {
+        let expression = /^[^@]+@\w+(\.\w+)+\w$/
+        if (expression.test(email) == true) {
+            // Email is good
+
+            return true
+        } else {
+            // Email is not good
+            return false
+        }
+    }
+
+    function validate_password(password) {
+        // Firebase only accepts lengths greater than 6
+        if (password < 6) {
+            return false
+        } else {
+            return true
+        }
+    }
+
+    function validate_field(field) {
+        if (field == null) {
+            return false
+        }
+
+        if (field.length <= 0) {
+            return false
+        } else {
+            return true
+        }
+    }
+</script>
+</html>

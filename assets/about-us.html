@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cook Book</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="recipes.css">
+</head>
+<body>
+    <header class="container" id="home">
+        <div class="header">
+            <div class="nav-box">
+                <div class="dot first"></div>
+                <div class="dot second"></div>
+                <div class="dot third"></div>
+            </div>
+            <div class="logo">
+                <a href="../index.html">
+                    <h1>Cook <span>Book</span></h1>
+                </a>
+                <!-- <h1>Try My Food</h1> -->
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="recipes.html" id="recipe-time">Recipes</a>
+                        <!-- <ul class="drop-down">
+                            <li><a href="assets/breakfast-recipes.html">Breakfast Recipes</a></li>
+                            <li><a href="assets/lunch.html">Lunch</a></li>
+                            <li><a href="assets/dinner.html">Dinner</a></li>
+                        </ul> -->
+                    </li>
+                    <li><a href="breakfast.html">Breakfast</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <div class="search-area ">
+                    <div class="search-heading-text search-btn">
+                        <span>Search</span>
+                    </div>
+                    <div class="search">
+                        <input id="searchid" onfocus="this.value=''" placeholder="What are you looking for?">
+                        <div class="search-img" type="submit">
+                            <img src="images/search.svg" alt="search">
+                        </div>
+                    </div>
+                    <div class="search-btn ">
+                        <div class="search-img search-button active">
+                            <img src="images/search.svg" alt="search">
+                        </div>
+
+                        <div class="search-img close-search-button">
+                            <img src="images/cross-lines.svg" alt="close">
+                        </div>
+                    </div>
+
+                </div>
+                <!-- search container  -->
+                <div class="search_container">
+                    <h3>Item Name</h3>
+                    <div class="serach-wrapper" id="search-list">
+                    </div>
+
+                    <!-- <hr> -->
+                    <h3>Ingredients</h3>
+                    <div class="serach-wrapper" id="ingred-search-list">
+
+                    </div>
+
+                </div>
+                <!-- search ends  -->
+                <div class="subscribe header-login">
+                    <a class="main-login-button">
+                        <button class="login-btn" onclick="show_hide_login()">
+                            <img src="images/account_circle.svg" alt="login">
+                            <span>Login</span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="login-form">
+                <div class="login-container">
+                    <div class="login-header">
+                        <h3 class="logo">Cook Book</h3>
+                        <div class="login-header-close" onclick="show_hide_login()">
+                            <img src="images/cross-lines.svg" alt="close">
+                        </div>
+                    </div>
+                    <img src="images/samosa.webp" alt="cook book">
+                    <div class="login-wrapper">
+                        <h3 class="sub-page-heading active">Login</h3>
+                        <h3 class="sub-page-heading">SignUp</h3>
+                        <div class="username log">
+                            <label for="full_name">User Name</label>
+                            <input type="username" class="login-inputs" id="full_name" placeholder="Enter your Name">
+                        </div>
+                        <div class="emailid log">
+                            <label for="email">Email Address</label>
+                            <input type="email" class="login-inputs" id="email" placeholder="Enter your Email-Id">
+                        </div>
+                        <div class="passwords log">
+                            <label for="password">Password</label>
+                            <input type="password" class="login-inputs" id="password" placeholder="Enter your Password">
+                        </div>
+                        <div class="button-log active" id="login">LOG IN</div>
+                        <div class="button-log" id="register">Sign Up</div>
+
+                        <div class="other-option active" onclick="other_option(this)">
+                            don't have account Sign-Up
+                        </div>
+                        <div class="other-option" onclick="other_option(this)">
+                            have a account Login
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+<!-- heder ends  -->
+<main class="aboutus-main"> 
+    <div class="container">
+        <div class="about">
+            <h1>About Us</h1>
+            <p>Welcome to CookBook!</p>
+            <p>At CookBook, we believe that food brings people together, and cooking is an art that allows us to
+                explore different cultures, flavors, and ingredients. Our website is dedicated to all food enthusiasts,
+                from seasoned chefs to kitchen beginners, who share a passion for creating delicious and memorable
+                meals.</p>
+
+        </div>
+
+        <div class="our-mission">
+            <h2>Our Mission</h2>
+            <p>Our mission is to inspire and empower home cooks of all levels to explore their culinary potential,
+                experiment with diverse recipes, and discover the joy of preparing delectable dishes. We aim to provide
+                a vast collection of tried-and-tested recipes, cooking tips, and helpful resources that will turn your time
+                in the kitchen into a delightful and rewarding experience.</p>
+
+
+        </div>
+
+        <div class="what-we-offer">
+            <h1>What We Offer</h1>
+            <div class="offer1">
+                <h2>A wide Array of Recipes :</h2>
+                <p>Our website boasts a vast and ever-growing collection of recipes from
+                    around the world. From traditional family favorites to innovative culinary creations, you&#39;re sure to find
+                    something that tantalizes your taste buds.</p>
+            </div>
+            
+            <div class="offer-2">
+                <h2>Cooking Tips and Techniques :</h2>
+                <p>We are not just about recipes; we also share valuable cooking tips, techniques, and secrets that will help
+                    elevate your culinary skills to the next level.</p>
+            </div>
+            <div class="offer3">
+                <h2>Dietary Considerations :</h2>
+                <p>We understand that dietary preferences and restrictions are diverse. Therefore, we offer a variety of
+                    recipes that cater to different dietary needs, including vegetarian, vegan, gluten-free, and more.</p>
+            </div>
+            
+        </div>
+        <div class="contact-us">
+            <h2>Contact Us :</h2>
+            <p>If you have any questions, feedback, or suggestions, please don&#39;t hesitate to contact us. We
+                value your input and are committed to continuously improving CookBook to make it the
+                ultimate destination for food enthusiasts.</p>
+                <p>Thank you for being a part of our culinary journey!</p>
+                <p>Happy Cooking, CookBook Team</p>
+        </div>
+
+
+    </div>
+</main>
+
+
+</body>
+</html>

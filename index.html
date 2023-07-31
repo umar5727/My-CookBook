@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cook Book</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/images/logo_01.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
+
+<body class="food">
+    <div class="loader" id="loading"> </div>
+    <div class="top">
+
+        <header class="container" id="home">
+            <div class="header">
+                <div class="nav-box" onclick="show_nav()">
+                    <div class="dot first"></div>
+                    <div class="dot second"></div>
+                    <div class="dot third"></div>
+                </div>
+                <div class="logo">
+                    <a href="#home">
+                        <h1>Cook <span>Book</span></h1>
+                    </a>
+                    <!-- <h1>Try My Food</h1> -->
+                </div>
+                <nav class="header-nav">
+                    <ul class="header-ul">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="assets/recipes.html" id="recipe-time">Recipes</a>
+                            <!-- <ul class="drop-down">
+                                <li><a href="assets/breakfast-recipes.html">Breakfast Recipes</a></li>
+                                <li><a href="assets/lunch.html">Lunch</a></li>
+                                <li><a href="assets/dinner.html">Dinner</a></li>
+                            </ul> -->
+                        </li>
+                        <li class="drop-down-li">
+                            <a href="#home">Meals </a>
+                            <ul>
+                                <li><a href="assets/breakfast.html">Breakfast</a>
+                                </li>
+                                <li><a href="assets/lunch.html">Lunch</a>
+                                </li>
+                                <li><a href="assets/dinner.html">Dinner</a>
+                                </li>
+                            </ul>
+
+
+                        </li>
+                        <li><a href="assets/about-us.html">About Us</a></li>
+                    </ul>
+                </nav>
+                <div class="header-right">
+                    <div class="search-area header-search-area com ">
+                        <div class="search-heading-text search-btn">
+                            <span>Search</span>
+                        </div>
+                        <div class="search">
+                            <input id="searchid" onfocus="this.value=''" placeholder="What are you looking for?">
+                            <div class="search-img" type="submit">
+                                <img src="assets/images/search.svg" alt="search">
+                            </div>
+                        </div>
+                        <div class="search-btn ">
+                            <div class="search-img search-button active">
+                                <img src="assets/images/search.svg" alt="search">
+                            </div>
+
+                            <div class="search-img close-search-button">
+                                <img src="assets/images/cross-lines.svg" alt="close">
+                            </div>
+                        </div>
+
+                        <div class="search_container ">
+                            <h3>Item Name</h3>
+                            <div class="serach-wrapper" id="search-list">
+                            </div>
+
+                            <!-- <hr> -->
+                            <h3>Ingredients</h3>
+                            <div class="serach-wrapper" id="ingred-search-list">
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- search container  -->
+                    <!-- search ends  -->
+                    <div class="subscribe header-login">
+                        <a class="main-login-button">
+                            <button id='user_login' class="login-btn">
+                                <img src="assets/images/account_circle.svg" alt="login">
+                                <span>Login</span>
+                            </button>
+                            <button id='user_logout' class="login-btn">
+                                <img src="assets/images/account_circle.svg" alt="login">
+                                <span id="change_username">Login</span=>
+                            </button>
+
+                        </a>
+                    </div>
+                </div>
+                <div class="login-form">
+                    <div class="login-container">
+                        <div class="login-header">
+                            <h3 class="logo">Cook Book</h3>
+                            <div class="login-header-close">
+                                <img src="assets/images/cross-lines.svg" alt="close">
+                            </div>
+                        </div>
+                        <img src="assets/images/samosa.webp" alt="cook book">
+                        <div class="login-wrapper">
+                            <h3 class="sub-page-heading active">Login</h3>
+                            <h3 class="sub-page-heading">SignUp</h3>
+                            <div class="username log">
+                                <label for="full_name">User Name</label>
+                                <input type="username" class="login-inputs" id="full_name"
+                                    placeholder="Enter your Name">
+                            </div>
+                            <div class="emailid log">
+                                <label for="email">Email Address</label>
+                                <input type="email" class="login-inputs" id="email" placeholder="Enter your Email-Id">
+                            </div>
+                            <div class="passwords log">
+                                <label for="password">Password</label>
+                                <input type="password" class="login-inputs" id="password"
+                                    placeholder="Enter your Password">
+                            </div>
+                            <div class="button-log active" id="login">LOG IN</div>
+                            <div class="button-log" id="register">Sign Up</div>
+
+                            <div class="other-option active" onclick="other_option(this)">
+                                don't have account Sign-Up
+                            </div>
+                            <div class="other-option" onclick="other_option(this)">
+                                have a account Login
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header ends  -->
+
+        <main class="food">
+            <section class="main-content">
+                <div class="search-area header-search-area mob">
+                    <div class="search">
+                        <input id="searchid" onfocus="this.value=''" placeholder="What are you looking for?">
+                        <div class="search-img" type="submit">
+                            <img src="assets/images/search.svg" alt="search">
+                        </div>
+                    </div>
+
+
+                    <div class="search_container ">
+                        <h3>Item Name</h3>
+                        <div class="serach-wrapper" id="search-list">
+                        </div>
+
+                        <!-- <hr> -->
+                        <h3>Ingredients</h3>
+                        <div class="serach-wrapper" id="ingred-search-list">
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="container content ">
+                    <div class="left title-content">
+                        <div class="main-text">
+                            <h1>Let's Start Cooking With Popular Recipes</h1>
+                            <!-- <h3>Summer storecupboard meals</h3> -->
+                        </div>
+                        <div class="main-dis com">
+                            <span>Want to learn cook but confuse how to start?</span>
+                            <span>No need to worry again!</span>
+                        </div>
+                        <div class="com"><button>Get Started</button></div>
+                    </div>
+                    <div class="right ani-bottom">
+                        <div class="main-img "><img src="assets/images/main.png" alt="samosa"></div>
+
+                    </div>
+                    <div class="main-dis mob">
+                        <span>Want to learn cook but confuse how to start?</span>
+                        <span>No need to worry again!</span>
+                    </div>
+                    <div class="mob"><button>Get Started</button></div>
+                    <div class="small_img ani">
+
+                        <img src="assets/images/green1.png" alt="#" class="s1">
+                        <img src="assets/images/green2.png" alt="#" class="s2">
+                        <img src="assets/images/green2.png" alt="#" class="s3">
+                        <img src="assets/images/green1.png" alt="#" class="s4">
+                    </div>
+                </div>
+            </section>
+            <!-- intro ends -->
+            <section class="popular container">
+
+                <div class="section-title ani">
+                    <h2>Popular Food</h2>
+                    <p>We Provide a variety of Food and beverage recipes with high taste from famous chefs</p>
+                </div>
+                <div class="popular-images ">
+                    <a href="assets/shakshuka-with-feta.html" class="imag ani">
+                        <img class=" title" src="assets/images/Shakshuka-Feta-Olives-LEAD.png"
+                            alt="Shakshuka Feta Olives">
+
+                    </a>
+                    <a href="assets/Saigon-Noodle-Salad.html" class="imag ani">
+                        <img class="title" src="assets/images/Saigon Noodle Salad.png" alt="Saigon Noodles Salad">
+                    </a>
+                    <a href="assets/Dal-fry.html" class="imag ani"><img class="title" src="assets/images/Dal-Tadka.png"
+                            alt="Dal Fry">
+                    </a>
+                    <a href="assets/Palak-paneer.html" class="imag ani"><img class="title"
+                            src="assets/images/palak-paneer.jpg" alt="Palak Paneer">
+                    </a>
+                    <a href="assets/bluebarry-muffin-top.html" class="imag ani"><img class="title"
+                            src="assets/images/BlueberryMuffinTops.webp" alt="Blueberry MuffinTops"></a>
+                    <a href="assets/samosa.html" class="imag ani"><img class="title" src="assets/images/samosa.webp"
+                            alt="Samosa"></a>
+                    <a href="assets/Paw-bhaji.html" class="imag ani"><img class="title"
+                            src="assets/images/Pav-Bhaji-1.webp" alt="Pav Bhaji"></a>
+                    <a href="" class="imag ani"><img class="title" src="assets/images/Banana-Pancakes.webp"
+                            alt="Banana Pancakes"></a>
+                    <a href="" class="imag ani"><img class="title" src="assets/images/Apple-Bread.webp"
+                            alt="Apple Bread">
+                    </a>
+
+                </div>
+
+            </section>
+            <!-- popular section ends  -->
+
+
+        </main>
+    </div>
+
+    <!-- lunch  -->
+    <section class="container no_cook">
+
+        <h2 id="no-cook" class="ani"><a href="assets/no-cook.html">Almost No Cook MealS</a></h2>
+        <section class="content">
+            <div class="card home-card ani" id="item01">
+                <a href="assets/drinks/my-mango-lassi.html"><img src="assets/images/mango-lassi.webp"
+                        alt="My Mango lassi"></a>
+                <div class="card-title-area">
+                    <div class="card-title">
+                        <a href="assets/drinks/my-mango-lassi.html">
+                            <h3>My Mango Lassi</h3>
+                        </a>
+                        <div class="card-footer">
+                            <div class="timer">
+                                <img src="assets/images/timer.webp" alt="#">
+                                <span>20 m</span>
+                            </div>
+                            <div class="ingred">
+                                <div class="ingred-wrapper">
+                                    <div class="ingred-img"><img src="assets/images/ingred.svg" alt="ingredients"></div>
+                                    <div class="ingred-container">
+                                        <h3>Ingredients</h3>
+                                        <div class="ingred-list">
+                                            <span>Mango</span>
+                                            <span>Yogurt</span>
+                                            <span>Milk</span>
+                                            <span>Cream</span>
+                                            <span>Sugar</span>
+                                            <!-- <span>Ground Cardamom</span> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- card ends  -->
+            <div class="card home-card ani" id="item13">
+                <a href="assets/hasselback-tomato.html"><img src="assets/images/hasselback tomato.png"
+                        alt="Chicken Crepe Riviera"></a>
+                <div class="card-title-area">
+                    <div class="card-title">
+                        <a href="assets/hot-mexican-bean-crepes.html">
+                            <h3>Hasselback Tomato Clubs</h3>
+                        </a>
+                        <div class="card-footer">
+                            <div class="timer">
+                                <img src="assets/images/timer.webp" alt="#">
+                                <span>20 m</span>
+                            </div>
+                            <div class="ingred">
+                                <div class="ingred-wrapper">
+                                    <div class="ingred-img"><img src="assets/images/ingred.svg" alt="ingredients"></div>
+                                    <div class="ingred-container">
+                                        <h3>Ingredients</h3>
+                                        <div class="ingred-list">
+                                            <span> tomatoes</span>
+                                            <span>Swiss cheese</span>
+                                            <span> bacon strips</span>
+                                            <span> Bibb lettuce leaves</span>
+                                            <span> ripe avocado</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- card ends  -->
+            <div class="card home-card ani" id="item14">
+                <a href="assets/hasselback-tomato.html"><img src="assets/images/Chicken Chow Mein Salad.png"
+                        alt="Chicken Chow Mein Salad"></a>
+                <div class="card-title-area">
+                    <div class="card-title">
+                        <a href="assets/hot-mexican-bean-crepes.html">
+                            <h3>Chicken Chow Mein Salad</h3>
+                        </a>
+                        <div class="card-footer">
+                            <div class="timer">
+                                <img src="assets/images/timer.webp" alt="#">
+                                <span>20 m</span>
+                            </div>
+                            <div class="ingred">
+                                <div class="ingred-wrapper">
+                                    <div class="ingred-img"><img src="assets/images/ingred.svg" alt="ingredients"></div>
+                                    <div class="ingred-container">
+                                        <h3>Ingredients</h3>
+                                        <div class="ingred-list">
+                                            <span> fresh spinach</span>
+                                            <span>oranges</span>
+                                            <span> cooked chicken</span>
+                                            <span> red cabbage</span>
+                                            <span> thinly sliced</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- card ends  -->
+
+        </section>
+    </section>
+    <!-- no cook ends  -->
+
+
+    <section class="chef">
+        <div class="container content ani">
+            <div class="left image">
+                <div class="main-text mob">
+                    <h2>Variety of food and beverage recipes</h2>
+
+                </div>
+                <div class="main-img"><img src="assets/images/chef.png" alt="chef"></div>
+            </div>
+
+            <div class="right title-content">
+                <div class="main-text com">
+                    <h2>Variety of food and beverage recipes</h2>
+
+                </div>
+                <div class="main-dis">
+                    <p>We have prepared a variety of food and beverage recipes from famous chefs. with cooking steps
+                        <br>and with good taste.
+                    </p>
+                </div>
+                <!-- <div><button>View Menu</button></div> -->
+            </div>
+
+        </div>
+    </section>
+    <!-- chef section ends  -->
+
+
+    <!-- popular menu starts  -->
+
+    <section class="menu com">
+        <div class="container ">
+            <a class="move" onclick="prev()" id="left">
+                <img src="assets/images/arrow_back.svg" alt="back">
+            </a>
+            <div class="menu-container">
+                <div class="myslide new">
+                    <a href="assets/canadian-burger.html" class="left title-content">
+                        <div class="main-text">
+                            <h2>Canadian Burger</h2>
+                            <!-- <h3>Summer storecupboard meals</h3> -->
+                        </div>
+                        <div class="main-dis">
+                            <p>Cheeseburger is a hamburger topped with cheese. Tradionally. the slice of cheese is
+                                placed on
+                                top
+                                of the meat patty</p>
+                            <span>30 min</span>
+                        </div>
+                        <div class="ingredients">
+                            <img src="assets/images/bread.png" alt="Bread">
+                            <img src="assets/images/meat.png" alt="Meat">
+                            <img src="assets/images/chease.png" alt="Chease">
+                            <img src="assets/images/tomato.png" alt="Tomato">
+                            <img src="assets/images/onion.png" alt="Onion">
+                            <span>+4</span>
+                        </div>
+                    </a>
+                    <div class="right image">
+                        <div class="main-img"><img src="assets/images/canadian_burger1-removebg.png" alt="Burger"></div>
+                    </div>
+                </div>
+                <!-- first slide  -->
+                <div class="myslide">
+                    <a href="assets/drinks/my-mango-lassi.html" class="left title-content">
+                        <div class="main-text">
+                            <h2> My Mango Lassi</h2>
+                            <!-- <h3>Summer storecupboard meals</h3> -->
+                        </div>
+                        <div class="main-dis">
+                            <p>Mango lassi is very rich and luxurious drink with yogurt and mangoes. It is the perfect
+                                summer drink when served chilled.</p>
+                            <span>30 min</span>
+                        </div>
+                        <!-- <div><button>View Menu</button></div> -->
+                    </a>
+                    <div class="right image">
+                        <a href="assets/drinks/my-mango-lassi.html" class="main-img"><img
+                                src="assets/images/mango-lassi.webp" alt="Mango Lassi"></a>
+                    </div>
+                </div>
+                <!-- second slide  -->
+                <div class="myslide">
+                    <a href="assets/pav-bhaji.html" class="left title-content">
+                        <div class="main-text">
+                            <h2>Pav Bhaji </h2>
+                            <!-- <h3>Summer storecupboard meals</h3> -->
+                        </div>
+                        <div class="main-dis">
+                            <p>Pav bhaji is a street food dish from India consisting of a thick vegetable curry served
+                                with a soft bread roll. It originated in the city of Mumbai.</p>
+                            <span>30 min</span>
+                        </div>
+                        <!-- <div><button>View Menu</button></div> -->
+                    </a>
+                    <div class="right image">
+                        <a href="assets/pav-bhaji.html" class="main-img"><img src="assets/images/Pav-Bhaji-1.webp"
+                                alt="chef"></a>
+                    </div>
+                </div>
+                <!-- third slide  -->
+                <div class="myslide">
+                    <a href="assets/samosa.html" class="left title-content">
+                        <div class="main-text">
+                            <h2>Samosa</h2>
+                            <!-- <h3>Summer storecupboard meals</h3> -->
+                        </div>
+                        <div class="main-dis">
+                            <p>A samosa is a fried South Asian pastry with a savoury filling, including ingredients such
+                                as spiced potatoes, onions, peas, meat or fish</p>
+                            <span>25 min</span>
+                        </div>
+                        <div>
+                            <!-- <button>View Menu</button> -->
+                        </div>
+                    </a>
+                    <div class="right image">
+                        <a href="assets/samosa.html" class="main-img">
+                            <img src="assets/images/samosa.webp" alt="chef">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- fourth slide  -->
+            <a class="move" onclick="next()" id="right">
+                <img src="assets/images/arrow_forward.svg" alt="forward">
+            </a>
+        </div>
+
+        <!-- <div class="dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"> </span>
+            <span class="dot" onclick="currentSlide(3)"> </span>
+            <span class="dot" onclick="currentSlide(4)"> </span>
+        </div> -->
+    </section>
+    <!-- popular menu ends -->
+
+
+    <section class="container no_cook">
+
+        <h2 id="no-cook" class="ani"><a href="assets/dinner.html">Dinner</a></h2>
+        <section class="content">
+            <div class="card home-card ani" id="item4">
+                <a href="assets/palak-paneer.html"><img src="assets/images/palak-paneer.jpg" alt="palak paneer"></a>
+                <div class="card-title-area">
+                    <div class="card-title">
+                        <a href="assets/palak-paneer.html">
+                            <h3>Palak Paneer</h3>
+                        </a>
+                        <div class="card-footer">
+                            <div class="timer">
+                                <img src="assets/images/timer.webp" alt="#">
+                                <span>20 m</span>
+                            </div>
+                            <div class="ingred">
+                                <div class="ingred-wrapper">
+                                    <div class="ingred-img"><img src="assets/images/ingred.svg" alt="ingredients"></div>
+                                    <div class="ingred-container">
+                                        <h3>Ingredients</h3>
+                                        <div class="ingred-list">
+                                            <span>Paneer</span>
+                                            <span>Oil</span>
+                                            <span>Cumin Seeds</span>
+                                            <span>Spinach</span>
+                                            <span>tomato</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- card ends  -->
+
+            <div class="card home-card ani" id="item2">
+                <a href="assets/dal-fry.html"><img src="assets/images/Dal-Tadka.png" alt="Dal fry"></a>
+                <div class="card-title-area">
+                    <div class="card-title">
+                        <a href="assets/dal-fry.html">
+                            <h3>Dal Fry</h3>
+                        </a>
+                        <div class="card-footer">
+                            <div class="timer">
+                                <img src="assets/images/timer.webp" alt="#">
+                                <span>20 m</span>
+                            </div>
+                            <div class="ingred">
+                                <div class="ingred-wrapper">
+                                    <div class="ingred-img"><img src="assets/images/ingred.svg" alt="ingredients"></div>
+                                    <div class="ingred-container">
+                                        <h3>Ingredients</h3>
+                                        <div class="ingred-list">
+                                            <span>Toor Dal</span>
+                                            <span>Moong Dal</span>
+                                            <span>Ghee</span>
+                                            <span>Mustard Seeds</span>
+                                            <span>Cumin Seeds</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- card ends  -->
+            <div class="card home-card ani" id="item6">
+                <a href="assets/shakshuka-with-feta.html"><img src="assets/images/Shakshuka-Feta-Olives-LEAD.png"
+                        alt="shakshuka with feta"></a>
+                <div class="card-title-area">
+                    <div class="card-title">
+                        <a href="assets/shakshuka-with-feta.html">
+                            <h3>Shakshuka with feta</h3>
+                        </a>
+                        <div class="card-footer">
+                            <div class="timer">
+                                <img src="assets/images/timer.webp" alt="#">
+                                <span>20 m</span>
+                            </div>
+                            <div class="ingred">
+                                <div class="ingred-wrapper">
+                                    <div class="ingred-img"><img src="assets/images/ingred.svg" alt="ingredients"></div>
+                                    <div class="ingred-container">
+                                        <h3>Ingredients</h3>
+                                        <div class="ingred-list">
+                                            <span>tomato</span>
+                                            <span>patato</span>
+                                            <span>tomato</span>
+                                            <span>carrot</span>
+                                            <span>tomato</span>
+                                            <span>orange</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- card ends  -->
+
+            <div class="card home-card ani" id="item12">
+                <a href="assets/veg-biryani.html"><img src="assets/images/veg-biryani.png"
+                        alt="Chicken Crepe Riviera"></a>
+                <div class="card-title-area">
+                    <div class="card-title">
+                        <a href="assets/hot-mexican-bean-crepes.html">
+                            <h3>Veg Biryani</h3>
+                        </a>
+                        <div class="card-footer">
+                            <div class="timer">
+                                <img src="assets/images/timer.webp" alt="#">
+                                <span>20 m</span>
+                            </div>
+                            <div class="ingred">
+                                <div class="ingred-wrapper">
+                                    <div class="ingred-img"><img src="assets/images/ingred.svg" alt="ingredients"></div>
+                                    <div class="ingred-container">
+                                        <h3>Ingredients</h3>
+                                        <div class="ingred-list">
+                                            <span>Bay leaf</span>
+                                            <span>Cinnamon</span>
+                                            <span>Cloves</span>
+                                            <span>Shahi Jeera</span>
+                                            <span>Rice</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- card ends  -->
+
+
+        </section>
+    </section>
+    <!-- Dinner ends  -->
+
+
+
+    <!-- footer starts  -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <div class="logo">
+                    <a href="#home">
+                        <h1>Cook Book</h1>
+                    </a>
+                </div>
+                <div>
+                    <div class="subscribe">
+                        <a class="main-login-button">
+                            <button class="login-btn" onclick="show_hide_login()">
+                                <img src="assets/images/account_circle.svg" alt="login">
+                                <span>Login</span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navigation">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="assets/recipes.css">Recipes</a></li>
+                    <li><a href="assets/no-cook.html">No Cook Meals</a></li>
+                    <li><a href="assets/about-us.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="navigation">
+                <ul>
+                    <li><a href="assets/breakfast.html">breakfast</a></li>
+                    <li><a href="assets/lunch.html">Lunch</a></li>
+                    <li><a href="assets/dinner.html">Dinner</a></li>
+                    <!-- <li><a href="#">Occasions</a></li> -->
+
+                </ul>
+            </div>
+            <div class="navigation terms">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <!-- <li><a href="#">Collection</a></li>
+                    <li><a href="#">About Us</a></li> -->
+                    <li id="logout_click">Log out</li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+    <div class="login" aria-hidden="true">
+        <div class="container">
+            <div class="login-header">
+                <div class="logo">
+                    <a href="#home">
+                        <h1>Cook <span>Book</span></h1>
+                    </a>
+                    <!-- <h1>Try My Food</h1> -->
+                </div>
+            </div>
+            <div class="banner">
+                <img src="assets/images/samosa.webp" alt="samosa">
+            </div>
+            <section class="login-container">
+                <div class="title">
+                    <h1>Log in</h1>
+                </div>
+                <div class="list">
+                    <div class="list-item">
+                        <button class="login-button">
+                            <div class="login_button-wrapper">
+                                <img src="assets/images/mail.svg" alt="email">
+                                <span>Log in with Email</span>
+                            </div>
+                        </button>
+                    </div>
+                    <!-- list item ends  -->
+                    <div class="list-item">
+                        <a class="login-button">
+                            <div class="login_button-wrapper">
+                                <img src="assets/images/mail.svg" alt="email">
+                                <span>Log in with Email</span>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- list item ends  -->
+                    <div class="list-item">
+                        <a class="login-button">
+                            <div class="login_button-wrapper">
+                                <img src="assets/images/mail.svg" alt="email">
+                                <span>Log in with Email</span>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- list item ends  -->
+                </div>
+            </section>
+            <div class="alternate">
+                <div class="alternate-wrapper container">
+                    <div class="alternate-registration">
+                        <span>
+                            Dont't have an account?
+                            <a href="#" class="join">Join now</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script type="text/javascript" src="script.js"></script>
+<script type="module">
+    document.querySelectorAll('.home-card').forEach((e) => {
+        e.addEventListener('click', () => {
+            document.querySelector('.login-form').classList.toggle('active');
+        })
+    })
+    //    console.log(document.getElementById(''))
+    //    document.getElementById('#change_username').innerText=`name`;
+
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+    import { getDatabase, ref, set, get, child, onValue } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
+
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+    // Your web app's Firebase configuration
+
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyCJ-tAC4zF1oX-Ew-oidjrvs171w7MQlf0",
+        authDomain: "cook-book-82b5e.firebaseapp.com",
+        databaseURL: "https://cook-book-82b5e-default-rtdb.firebaseio.com",
+        projectId: "cook-book-82b5e",
+        storageBucket: "cook-book-82b5e.appspot.com",
+        messagingSenderId: "775511724331",
+        appId: "1:775511724331:web:c006966e3112c96343756e"
+    };
+
+    // Initialize Firebase
+    // const app = initializeApp(firebaseConfig);
+
+    // Initialize Firebase
+    const firebase = initializeApp(firebaseConfig);
+    // Initialize variables
+    const auth = getAuth(firebase);
+    const db = getDatabase(firebase);
+
+    // Set up our register function
+    document.getElementById('register').addEventListener('click', () => {
+        // Get all our input fields
+        let email = document.getElementById('email').value
+        let password = document.getElementById('password').value
+        var full_name = document.getElementById('full_name').value
+        //   favourite_song = document.getElementById('favourite_song').value
+        //   milk_before_cereal = document.getElementById('milk_before_cereal').value
+
+        // Validate input fields
+        if (validate_email(email) == false || validate_password(password) == false) {
+            alert('Email or Password is Outta Line!!')
+            return
+            // Don't continue running the code
+        }
+        if (validate_field(full_name) == false) {
+            alert('enter user name!')
+            return
+        }
+
+        // Move on with Auth
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+                // ...
+
+                // Add this user to Firebase Database
+                // var database_ref = database.ref()
+
+                // // Create User data
+                // var user_data = {
+                //     full_name : full_name,
+                //   email : email,
+                //   last_login : Date.now()
+                // }
+
+                // // Push to Firebase Database
+                // database_ref.child('users/' + user.uid).set(user_data)
+                let userId = full_name;
+                set(ref(db, 'users/' + user.uid), {
+                    username: full_name,
+                    email: email,
+                    last_login: Date.now()
+                });
+
+                // DOne
+                alert('User Created!!')
+                document.querySelector('.login-form').style.display = 'none';
+            })
+            .catch((error) => {
+                // Firebase will use this to alert of its errors
+                var error_code = error.code
+                var error_message = error.message
+
+                alert(error_message)
+            })
+    })
+    // Set up our login function
+    document.getElementById('login').addEventListener('click', () => {
+
+        // Get all our input fields
+        let email = document.getElementById('email').value
+        let password = document.getElementById('password').value
+
+        // Validate input fields
+        if (validate_email(email) == false || validate_password(password) == false) {
+            console.log('email is' + email)
+            alert('Email or Password is Outta Line!!')
+            return
+            // Don't continue running the code
+        }
+
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+                // ...
+
+
+                // Add this user to Firebase Database
+                // var database_ref = database.ref()
+
+                // Create User data
+                // var user_data = {
+                //   last_login : Date.now()
+                // }
+
+                // Push to Firebase Database
+                // database_ref.child('users/' + user.uid).update(user_data)
+                //     let userId=full_name;
+                //     set(ref(db, 'users/' + userId), {
+                //     last_login : Date.now()
+                //   });
+
+                // DOne
+                alert('User Logged In!!')
+
+                document.querySelector('.login-form').style.display = 'none';
+                document.querySelector('.login-form').classList.toggle('confirm');
+                const dbRef = ref(getDatabase());
+                get(child(dbRef, `users/${user.uid}`)).then((snapshot) => {
+                    if (snapshot.exists()) {
+                        console.log(snapshot.val());
+                        var user_login_name = snapshot.val().username;
+                        user_login_name = user_login_name.substring(0, 5)
+
+                    } else {
+                        console.log("No data available");
+                    }
+                    document.getElementById('user_login').style.display = 'none';
+                    let user_logout = document.getElementById('user_logout');
+
+                    user_logout.style.display = 'block';
+
+                    document.getElementById('change_username').innerText = `${user_login_name}`;
+
+                    user_logout.innerHTML += `<span id="click_signout" >Sign Out</span> `;
+                }).catch((error) => {
+                    console.error(error);
+                });
+                // shos(full_name);
+
+            })
+            .catch(function (error) {
+                // Firebase will use this to alert of its errors
+                var error_code = error.code
+                var error_message = error.message
+
+                alert(error_message)
+            })
+
+    })
+
+
+    document.getElementById('click_signout').addEventListener('click', () => {
+
+        console.log('sign out clicked ')
+        signOut(auth).then(() => {
+            // Sign-out successful.
+
+            alert('user logout success')
+            document.getElementById('user_logout').style.display = 'none';
+            document.getElementById('user_login').style.display = 'block';
+            // list_array = "reset";
+            // document.querySelector('.login-form').classList.toggle('confirm');
+
+        }).catch((error) => {
+            // An error happened.
+        });
+    })
+
+    // Validate Functions
+    function validate_email(email) {
+        let expression = /^[^@]+@\w+(\.\w+)+\w$/
+        if (expression.test(email) == true) {
+            // Email is good
+
+            return true
+        } else {
+            // Email is not good
+            return false
+        }
+    }
+
+    function validate_password(password) {
+        // Firebase only accepts lengths greater than 6
+        if (password < 6) {
+            return false
+        } else {
+            return true
+        }
+    }
+
+    function validate_field(field) {
+        if (field == null) {
+            return false
+        }
+
+        if (field.length <= 0) {
+            return false
+        } else {
+            return true
+        }
+    }
+</script>
+
+</html>
